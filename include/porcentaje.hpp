@@ -1,8 +1,8 @@
-Include <stdexcept>
+# include <stdexcept>
 class porcentaje
 {
 private:
-    /* data */
+    int numero;
 public:
     porcentaje()
     {
@@ -10,14 +10,26 @@ public:
     }
     porcentaje(int numero)
     {
-        this->numero = numero;
-        throw new std::runtime_error("numero equivocado");
+        if (numero>100||numero<0)
+        {
+            throw new std::runtime_error("numero equivocado");
+        }else{
+            this->numero = numero;
+        }
+         this->numero = numero;
     }
     ~porcentaje() {}
     void Incrementar(int numero)
     {
+        this->numero+=numero;
     }
     void Disminuir(int numero)
     {
+        this->numero-=numero;
+    }
+   
+    int Imprimir ()
+    {
+        return this->numero;
     }
 };

@@ -1,9 +1,10 @@
-@startuml
+@startuml nombre
 
 class Usuario 
+class Numero 
 class Mascota{
     -Felicidad felicidad 
-    +pasear ()
+    +Pasear ()
 }
 class Juego{
     -Mascota mascota 
@@ -14,10 +15,11 @@ class Felicidad{
 }
 class Porcentaje{
     -numero numero
-    +incrementar (Numero)
-    +disminuir(numero)
+    +Incrementar (numero)
+    +Disminuir(numero)
 }
 
+Porcentaje *-- Numero
 Usuario o-- Mascota
 Mascota *-- Felicidad
 Juego *-- Usuario
