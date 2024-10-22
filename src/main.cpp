@@ -1,6 +1,8 @@
+
 #include <iostream>
 #include<porcentaje.hpp>
 #include<list>
+using namespace std;
 int main(){
     std::list<porcentaje>focos;
     porcentaje foco1;
